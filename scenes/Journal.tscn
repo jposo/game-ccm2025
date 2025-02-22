@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bv0f40mwjrbn"]
+[gd_scene load_steps=4 format=3 uid="uid://bv0f40mwjrbn"]
 
 [ext_resource type="Script" path="res://src/journal.gd" id="1_ikq4n"]
 [ext_resource type="Texture2D" uid="uid://g8gkjr8ufos3" path="res://assets/Sprites/Inventory Book/Idle/1.png" id="2_884ax"]
-[ext_resource type="PackedScene" uid="uid://cvfoyxfad3wj5" path="res://scenes/Tab.tscn" id="3_mfpb2"]
-[ext_resource type="PackedScene" uid="uid://23qkv5kt25vd" path="res://scenes/Stats.tscn" id="4_2ya0l"]
+[ext_resource type="PackedScene" uid="uid://23qkv5kt25vd" path="res://scenes/LeftSide.tscn" id="4_2ya0l"]
 
 [node name="Journal" type="Node2D"]
 script = ExtResource("1_ikq4n")
@@ -11,18 +10,8 @@ script = ExtResource("1_ikq4n")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_884ax")
 
-[node name="StoryTab" parent="." instance=ExtResource("3_mfpb2")]
-visible = false
-position = Vector2(-352, -48)
-
-[node name="ResourcesTab" parent="." instance=ExtResource("3_mfpb2")]
-visible = false
-position = Vector2(-352, -8)
-icon_asset = "res://assets/Sprites/Content/Side Tabs/4.png"
-tab = 1
-
-[node name="Stats" parent="." instance=ExtResource("4_2ya0l")]
-offset_left = -304.0
-offset_top = -88.0
-offset_right = -304.0
-offset_bottom = -88.0
+[node name="LeftSide" parent="." instance=ExtResource("4_2ya0l")]
+offset_left = -312.0
+offset_top = -120.0
+offset_right = -312.0
+offset_bottom = -112.0

@@ -1,4 +1,4 @@
-extends Control
+extends VBoxContainer
 
 class_name Stats
 
@@ -26,8 +26,7 @@ func _ready() -> void:
 		var hbox = HBoxContainer.new()
 		hbox.add_child(tr)
 		hbox.add_child(lb)
-		$VBoxContainer.add_child(hbox)
-
+		add_child(hbox)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
