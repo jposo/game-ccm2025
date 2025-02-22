@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://23qkv5kt25vd"]
+
+[ext_resource type="Script" path="res://src/stats.gd" id="1_ncw7c"]
+[ext_resource type="FontFile" uid="uid://bvbmtb3lji302" path="res://assets/Fonts/PixelizedHandwritingRegular-8jz2.ttf" id="2_fbk4u"]
+
+[sub_resource type="Theme" id="Theme_8qt57"]
+default_font = ExtResource("2_fbk4u")
+default_font_size = 36
+
+[node name="Stats" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = SubResource("Theme_8qt57")
+script = ExtResource("1_ncw7c")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
