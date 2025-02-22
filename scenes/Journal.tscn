@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bv0f40mwjrbn"]
+[gd_scene load_steps=5 format=3 uid="uid://bv0f40mwjrbn"]
 
 [ext_resource type="Script" path="res://src/journal.gd" id="1_ikq4n"]
 [ext_resource type="Texture2D" uid="uid://g8gkjr8ufos3" path="res://assets/Sprites/Inventory Book/Idle/1.png" id="2_884ax"]
 [ext_resource type="PackedScene" uid="uid://23qkv5kt25vd" path="res://scenes/LeftSide.tscn" id="4_2ya0l"]
+[ext_resource type="PackedScene" uid="uid://c87hofpdh6spt" path="res://scenes/RightSide.tscn" id="4_jaoic"]
 
 [node name="Journal" type="Node2D"]
 script = ExtResource("1_ikq4n")
@@ -15,3 +16,5 @@ offset_left = -312.0
 offset_top = -120.0
 offset_right = -312.0
 offset_bottom = -112.0
+
+[node name="RightSide" parent="." instance=ExtResource("4_jaoic")]
