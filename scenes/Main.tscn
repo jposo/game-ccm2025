@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv5jkbhj5tlaa"]
+
+[ext_resource type="Texture2D" uid="uid://g8gkjr8ufos3" path="res://Pocket Inventory Series #7 Gems of Status v1.0/Sprites/Inventory Book/Idle/1.png" id="1_av01y"]
+
+[node name="Main" type="Node2D"]
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(544, 296)
+texture = ExtResource("1_av01y")
