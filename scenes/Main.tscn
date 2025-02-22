@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://bv5jkbhj5tlaa"]
+[gd_scene load_steps=3 format=3 uid="uid://bv5jkbhj5tlaa"]
 
-[ext_resource type="Texture2D" uid="uid://g8gkjr8ufos3" path="res://Pocket Inventory Series #7 Gems of Status v1.0/Sprites/Inventory Book/Idle/1.png" id="1_av01y"]
+[ext_resource type="PackedScene" uid="uid://bv0f40mwjrbn" path="res://scenes/Journal.tscn" id="1_wvm2k"]
+[ext_resource type="PackedScene" uid="uid://xm3vhucafts8" path="res://scenes/Background.tscn" id="2_oh3la"]
 
 [node name="Main" type="Node2D"]
 
-[node name="1" type="Sprite2D" parent="."]
-position = Vector2(544, 296)
-texture = ExtResource("1_av01y")
+[node name="Journal" parent="." instance=ExtResource("1_wvm2k")]
+position = Vector2(600, 232)
+scale = Vector2(1.3, 1.3)
+
+[node name="Background" parent="." instance=ExtResource("2_oh3la")]
+z_index = -50
+position = Vector2(576, 224)
+scale = Vector2(1.5, 1.5)

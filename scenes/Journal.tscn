@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv0f40mwjrbn"]
+
+[ext_resource type="Script" path="res://src/journal.gd" id="1_ikq4n"]
+[ext_resource type="Texture2D" uid="uid://g8gkjr8ufos3" path="res://assets/Sprites/Inventory Book/Idle/1.png" id="2_884ax"]
+[ext_resource type="PackedScene" uid="uid://cvfoyxfad3wj5" path="res://scenes/Tab.tscn" id="3_mfpb2"]
+
+[node name="Journal" type="Node2D"]
+script = ExtResource("1_ikq4n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_884ax")
+
+[node name="Tab" parent="." instance=ExtResource("3_mfpb2")]
+position = Vector2(-352, -48)
+
+[node name="Tab2" parent="." instance=ExtResource("3_mfpb2")]
+position = Vector2(-352, -8)
+icon_asset = "res://assets/Sprites/Content/Side Tabs/4.png"
