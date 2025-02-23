@@ -72,6 +72,8 @@ var services := {
 
 func increase_day(newCash: int, newStatYou: int, newStatWife: int, newStatSon: int) -> void:
 	day += 1
+	if day%7==0:
+		cash+=500
 	cash += newCash
 	if members["familiar_1"]["value"] + newStatYou > 100:
 		members["familiar_1"]["value"] = 100

@@ -17,7 +17,6 @@ func update_button_text() -> void:
 	var key = str(current_day)
 	var event = events[key]
 	
-	# Reinicia las variables
 	newCash = 0
 	newStatYou = 0
 	newStatWife = 0

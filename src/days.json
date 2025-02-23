@@ -124,10 +124,13 @@
 		  ]
 		},
 		{
-		  "description": "Skip the purchases for now.",
+		  "description": "Skip the grocery shopping.",
 		  "result": [
-			{"newOption": "Purchases", "stat":"money", "delta": -80}]
-		}
+			{"newOption": "Grocery Shopping", "newStat":"money", "newDelta": -120},
+			{"newOption": "Gas", "newStat":"money", "newDelta": -80}
+			]
+		},
+		
 	  ]
 	}
   },
