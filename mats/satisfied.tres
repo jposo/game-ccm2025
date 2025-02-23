@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://46lxdrxqf3nf"]
+
+[ext_resource type="Texture2D" uid="uid://bpkhe80piphbk" path="res://assets/SpriteSheet/Satisfied-face-Sheet.png" id="1_boauw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1aqm0"]
+atlas = ExtResource("1_boauw")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jpll"]
+atlas = ExtResource("1_boauw")
+region = Rect2(50, 0, 50, 50)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1aqm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jpll")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]

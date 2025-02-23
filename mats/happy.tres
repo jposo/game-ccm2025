@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://du6d1myh6q3s8"]
+
+[ext_resource type="Texture2D" uid="uid://b4iw3ikjb68kb" path="res://assets/SpriteSheet/Happy-face.png" id="1_pml8y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwmuo"]
+atlas = ExtResource("1_pml8y")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yn1v"]
+atlas = ExtResource("1_pml8y")
+region = Rect2(50, 0, 50, 50)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwmuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6yn1v")
+}],
+"loop": false,
+"name": &"happy",
+"speed": 2.0
+}]

@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://bnxh7wiy0ro5d"]
+
+[ext_resource type="Texture2D" uid="uid://4kraw1cfusb6" path="res://assets/SpriteSheet/Sad-face-Sheet.png" id="1_om5wt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vukg"]
+atlas = ExtResource("1_om5wt")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dlt6"]
+atlas = ExtResource("1_om5wt")
+region = Rect2(50, 0, 50, 50)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vukg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dlt6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
