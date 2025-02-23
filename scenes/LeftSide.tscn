@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://23qkv5kt25vd"]
+[gd_scene load_steps=7 format=3 uid="uid://23qkv5kt25vd"]
 
 [ext_resource type="FontFile" uid="uid://bvbmtb3lji302" path="res://assets/Fonts/PixelizedHandwritingRegular-8jz2.ttf" id="1_cyhho"]
 [ext_resource type="Script" path="res://src/stats.gd" id="2_oaogj"]
 [ext_resource type="Script" path="res://src/calendar.gd" id="3_luhtr"]
 [ext_resource type="Script" path="res://src/services.gd" id="4_tq0el"]
+[ext_resource type="PackedScene" uid="uid://diw3surhadvhd" path="res://scenes/stats/Money.tscn" id="5_e5nl1"]
 
 [sub_resource type="Theme" id="Theme_8qt57"]
 default_font = ExtResource("1_cyhho")
@@ -12,6 +13,12 @@ default_font_size = 36
 [node name="LeftSide" type="VBoxContainer"]
 theme = SubResource("Theme_8qt57")
 theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Family"
+horizontal_alignment = 1
 
 [node name="Stats" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -34,4 +41,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Services"
 
 [node name="OptionButton" type="OptionButton" parent="Services"]
+layout_mode = 2
+
+[node name="Money" parent="." instance=ExtResource("5_e5nl1")]
 layout_mode = 2

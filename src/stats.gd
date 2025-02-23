@@ -3,11 +3,6 @@ extends HBoxContainer
 class_name Stats
 
 var stats = {
-	#"money": {
-		#"name": "",
-		#"value": 500,
-		#"node": "res://scenes/stats/Money.tscn",
-	#},
 	"familiar_1": {
 		"name": "You",
 		"value": 80,
@@ -22,7 +17,7 @@ var stats = {
 		"name": "Son",
 		"value": 80,
 		"node": "res://scenes/stats/Member.tscn"
-	}
+	},
 }
 
 # Called when the node enters the scene tree for the first time.
