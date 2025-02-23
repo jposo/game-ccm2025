@@ -27,6 +27,8 @@ func update_sprite(health: int) -> void:
 		elif health > 25: 
 			$MarginContainer/AnimatedSprite2D.sprite_frames = mid
 			$MarginContainer/AnimatedSprite2D.play()
-		elif health > 0: 
+		elif health >= 0: 
+			health=0;
+			Global.main.show_popup()
 			$MarginContainer/AnimatedSprite2D.sprite_frames = sad
 			$MarginContainer/AnimatedSprite2D.play()

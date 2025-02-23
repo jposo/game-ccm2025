@@ -78,9 +78,13 @@ func increase_day(newCash: int, newStatYou: int, newStatWife: int, newStatSon: i
 		game_ended = true
 		return
 	day += 1
+		
 	if day > 31:
 		game_ended = true
 	cash += newCash
+	if (cash <= 0):
+		cash=0
+		main.show_popup()
 	if members["familiar_1"]["value"] + newStatYou > 100:
 		members["familiar_1"]["value"] = 100
 	else:
