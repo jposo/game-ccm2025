@@ -18,13 +18,17 @@ text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
 fit_content = true
 
 [node name="Continue" type="Button" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme_override_font_sizes/font_size = 56
 text = "Option 1"
 autowrap_mode = 2
 script = ExtResource("2_xxwv5")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
+theme_override_font_sizes/font_size = 56
 text = "Option 2"
 autowrap_mode = 2
 script = ExtResource("4_1xnwl")

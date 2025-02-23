@@ -44,26 +44,27 @@ animations = [{
 }]
 
 [node name="Member" type="VBoxContainer"]
+theme_override_constants/separation = 6
 script = ExtResource("1_1nkac")
 sname = "Familiar"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 14
+theme_override_constants/margin_left = 36
+theme_override_constants/margin_top = 36
+theme_override_constants/margin_right = 36
+theme_override_constants/margin_bottom = 40
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer"]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_ir1w3")
 animation = &"happy"
 frame_progress = 0.92543
 centered = false
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-custom_minimum_size = Vector2(40, 0)
+custom_minimum_size = Vector2(75, 8)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = SubResource("Theme_65nxd")
