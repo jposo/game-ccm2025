@@ -10,3 +10,4 @@ func _on_button_up() -> void:
 	Global.calendar.draw()
 	Global.stats.draw()
 	Global.money.draw()
+	Global.day_manager.draw()

@@ -4,6 +4,7 @@ var journal: Journal
 var calendar: Calendar
 var stats: Stats
 var money: Money
+var day_manager: DayManager
 var day := 1
 var cash := 1000
 var members = {

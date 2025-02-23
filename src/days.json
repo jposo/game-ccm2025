@@ -2,7 +2,7 @@
   "1": {
 	"message": "Currently, more than 2 billion people do not have access to safe drinking water.",
 	"prompt": {
-	  "message": "It's your first day at your new company [company name]. You arrive home excited to live this new future.",
+	  "message": "It's your first day at your new company Seaside Fishing. You arrive home excited to live this new future.",
 	  "outcomes": [
 		{
 		  "description": "Continue your day without changes.",

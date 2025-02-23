@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dufhdpwu77a2k"]
+
+[ext_resource type="FontFile" uid="uid://bvbmtb3lji302" path="res://assets/Fonts/PixelizedHandwritingRegular-8jz2.ttf" id="1_yaiyj"]
+
+[resource]
+default_font = ExtResource("1_yaiyj")
+default_font_size = 24
