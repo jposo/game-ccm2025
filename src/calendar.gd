@@ -21,5 +21,5 @@ func draw():
 			lb.set("theme_override_colors/font_color", Color.RED)
 		else:
 			lb.set("theme_override_colors/font_color", Color.BLACK)
-		lb.text = "%s" % i
+		lb.text = "%s  " % i
 		add_child(lb)
