@@ -78,7 +78,8 @@ func increase_day(newCash: int, newStatYou: int, newStatWife: int, newStatSon: i
 		game_ended = true
 		return
 	day += 1
-		
+	if day % 7 == 0:
+		cash += 500
 	if day > 31:
 		game_ended = true
 	cash += newCash
