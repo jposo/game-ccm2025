@@ -118,16 +118,20 @@
 	  "message": "Decide whether to make the purchases.",
 	  "outcomes": [
 		{
-		  "description": "Make both purchases (groceries and gas).",
+		  "description": "Make all the payments: $120 for grocery shopping, $100 for water, $80 for gas.",
 		  "result": [
-			{ "stat": "money", "delta": -200, "member": "you" }
+			{ "stat": "money", "delta": -300, "member": "you" }
 		  ]
 		},
 		{
 		  "description": "Skip the purchases for now.",
 		  "result": [
-			{"newOption": "Purchases", "stat":"money", "delta": -80}]
-		}
+
+			{"newOption": "grocery shopping", "newStat":"money", "newDelta": -120},
+			{"newOption": "gas", "newStat":"money", "newDelta": -80},
+			{"newOption": "water", "newStat":"money", "newDelta": -100}
+			]
+		},
 	  ]
 	}
   },
@@ -265,15 +269,19 @@
 	  "message": "Decide whether to make the purchases.",
 	  "outcomes": [
 		{
-		  "description": "Make both purchases.",
+		  "description": "Make all the payments: $120 for grocery shopping, $100 for water, $80 for gas.",
 		  "result": [
-			{ "stat": "money", "delta": -80, "member": "you" }
+			{ "stat": "money", "delta": -300, "member": "you" }
 		  ]
 		},
 		{
-		  "description": "Skip the purchases.",
-		  "result": []
-		}
+		  "description": "Skip the grocery shopping.",
+		  "result": [
+			{"newOption": "grocery shopping", "newStat":"money", "newDelta": -120},
+			{"newOption": "gas", "newStat":"money", "newDelta": -80},
+			{"newOption": "water", "newStat":"money", "newDelta": -100}
+			]
+		},
 	  ]
 	}
   },
@@ -406,18 +414,21 @@
 	  "message": "Decide whether to make the corresponding payments or postpone them.",
 	  "outcomes": [
 		{
-		  "description": "Make all the payments: $600 for rent, $300 for electricity, and $100 for water.",
+		  "description": "Make all the payments: $600 for rent, $300 for electricity, $120 for grocery shopping, $100 for water, $80 for gas.",
 		  "result": [
-			{ "stat": "money", "delta": -1000, "member": "you" }
+			{ "stat": "money", "delta": -1200, "member": "you" }
 		  ]
 		},
 		{
 		  "description": "Do not make the payments, which will affect everyone's well-being starting on day 25.",
-		  "result": [
-			{ "stat": "health", "delta": -45, "member": "you" },
-			{ "stat": "health", "delta": -45, "member": "wife" },
-			{ "stat": "health", "delta": -45, "member": "son" }
-		  ]
+			"result": [
+			{"newOption": "grocery shopping", "newStat":"money", "newDelta": -120},
+			{"newOption": "gas", "newStat":"money", "newDelta": -80},
+			{"newOption": "rent", "newStat":"money", "newDelta": -600},
+			{"newOption": "electricity", "newStat":"money", "newDelta": -300},
+			{"newOption": "internet", "newStat":"money", "newDelta": -100},
+			{"newOption": "water", "newStat":"money", "newDelta": -100}
+			]
 		}
 	  ]
 	}
@@ -556,16 +567,24 @@
 	}
   },
   "28": {
-	"message": "You fill up your gas tank.",
+	"message": "It's time to do the grocery shopping and fill up your gas tank!",
 	"prompt": {
-	  "message": "Take a moment to refuel your vehicle.",
+	  "message": "Decide whether to make the purchases.",
 	  "outcomes": [
 		{
-		  "description": "Fill up the gas tank.",
+		  "description": "Make all the payments: $120 for grocery shopping, $100 for water, $80 for gas.",
 		  "result": [
-			{ "stat": "money", "delta": -40, "member": "you" }
+			{ "stat": "money", "delta": -300, "member": "you" }
 		  ]
-		}
+		},
+		{
+		  "description": "Skip the grocery shopping.",
+		  "result": [
+			{"newOption": "grocery shopping", "newStat":"money", "newDelta": -120},
+			{"newOption": "gas", "newStat":"money", "newDelta": -80},
+			{"newOption": "water", "newStat":"money", "newDelta": -100}
+			]
+		},
 	  ]
 	}
   },

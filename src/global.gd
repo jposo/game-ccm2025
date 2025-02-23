@@ -6,7 +6,7 @@ var calendar: Calendar
 var stats: Stats
 var money: Money
 var day_manager: DayManager
-
+var servicesManager
 var day := 1
 var cash := 1000
 var game_ended := false
@@ -31,49 +31,49 @@ var members = {
 
 enum ServiceType {
 	Weekly,
-	Monthly,
+	Monthly
 }
 
 var services := {
 	"Water": {
-		"cost": 100,
+		"cost": 0,
 		"type": ServiceType.Weekly,
 		"lastPaid": 0,
 		"enabled": false,
 	},
 	"Gasoline": {
-		"cost": 300,
+		"cost": 0,
 		"type": ServiceType.Weekly,
 		"lastPaid": 0,
 		"enabled": false,
 	},
 	"Groceries": {
-		"cost": 100,
+		"cost": 0,
 		"type": ServiceType.Weekly,
 		"lastPaid": 0,
 		"enabled": false,
 	},
 	"Internet": {
-		"cost": 300,
+		"cost": 0,
 		"type": ServiceType.Monthly,
 		"lastPaid": 0,
-		"enabled": true,
+		"enabled": false,
 	},
 	"Rent": {
-		"cost": 1500,
+		"cost": 0,
 		"type": ServiceType.Monthly,
 		"lastPaid": 0,
-		"enabled": true,
+		"enabled": false,
 	},
 	"Electricity": {
-		"cost": 300,
+		"cost": 0,
 		"type": ServiceType.Monthly,
 		"lastPaid": 0,
-		"enabled": true,
+		"enabled": false,
 	},
 }
 
-func increase_day(newCash: int, newStatYou: int, newStatWife: int, newStatSon: int) -> void:
+func increase_day(newCash: int, newStatYou: int, newStatWife: int, newStatSon: int, waterEnabled:bool, gasEnabled: bool, groceriesEnabled: bool, internetEnabled: bool, rentEnabled: bool, electricityEnabled: bool) -> void:
 	if day > 31:
 		game_ended = true
 		return
@@ -85,7 +85,6 @@ func increase_day(newCash: int, newStatYou: int, newStatWife: int, newStatSon: i
 		members["familiar_1"]["value"] = 100
 	else:
 		members["familiar_1"]["value"] += newStatYou
-		
 	if members["familiar_2"]["value"] + newStatWife > 100:
 		members["familiar_2"]["value"] = 100
 	else:
@@ -95,7 +94,14 @@ func increase_day(newCash: int, newStatYou: int, newStatWife: int, newStatSon: i
 		members["familiar_3"]["value"] = 100
 	else:
 		members["familiar_3"]["value"] += newStatSon
-	
+		
+	services["Water"]["enabled"] = waterEnabled
+	services["Gasoline"]["enabled"] = gasEnabled
+	services["Groceries"]["enabled"] = groceriesEnabled
+	services["Internet"]["enabled"] = internetEnabled
+	services["Rent"]["enabled"] = rentEnabled
+	services["Electricity"]["enabled"] = electricityEnabled
+
 
 func get_day() -> int:
 	return min(day, 31)

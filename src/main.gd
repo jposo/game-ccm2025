@@ -11,4 +11,5 @@ func show_popup() -> void:
 	$Popup.visible = true
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
+	get_tree().quit()
+	#get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")

@@ -43,7 +43,7 @@ func update_button_text() -> void:
 func _on_button_up() -> void:
 	if Global.game_ended:
 		return
-	Global.increase_day(newCash, newStatYou, newStatWife, newStatSon)
+	Global.increase_day(newCash, newStatYou, newStatWife, newStatSon, false, false, false, false, false, false)
 	Global.calendar.draw()
 	Global.stats.draw()
 	Global.money.draw()
