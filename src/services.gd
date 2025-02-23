@@ -1,14 +1,8 @@
 extends HBoxContainer
 
-var services := [
-	"Water", 
-	"Electricity", 
-	"Gas"
-]
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for service in services:
+	for service in Global.services.keys():
 		$OptionButton.add_item(service)
 
 

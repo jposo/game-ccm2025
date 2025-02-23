@@ -42,6 +42,7 @@ columns = 7
 script = ExtResource("3_luhtr")
 
 [node name="HSeparator2" type="HSeparator" parent="."]
+texture_filter = 1
 layout_mode = 2
 
 [node name="Services" type="HBoxContainer" parent="."]

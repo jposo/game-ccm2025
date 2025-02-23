@@ -120,7 +120,7 @@
 		{
 		  "description": "Make both purchases (groceries and gas).",
 		  "result": [
-			{ "stat": "money", "delta": -80, "member": "you" }
+			{ "stat": "money", "delta": -200, "member": "you" }
 		  ]
 		},
 		{
