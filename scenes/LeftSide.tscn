@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://23qkv5kt25vd"]
+[gd_scene load_steps=8 format=3 uid="uid://23qkv5kt25vd"]
 
 [ext_resource type="FontFile" uid="uid://bvbmtb3lji302" path="res://assets/Fonts/PixelizedHandwritingRegular-8jz2.ttf" id="1_cyhho"]
 [ext_resource type="Script" path="res://src/stats.gd" id="2_oaogj"]
@@ -9,6 +9,10 @@
 [sub_resource type="Theme" id="Theme_8qt57"]
 default_font = ExtResource("1_cyhho")
 default_font_size = 36
+
+[sub_resource type="Theme" id="Theme_05v38"]
+default_base_scale = 1.1
+default_font_size = 28
 
 [node name="LeftSide" type="VBoxContainer"]
 theme = SubResource("Theme_8qt57")
@@ -26,10 +30,24 @@ theme_override_constants/separation = 16
 alignment = 1
 script = ExtResource("2_oaogj")
 
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Calendar"
+horizontal_alignment = 1
+
 [node name="Calendar" type="GridContainer" parent="."]
 layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_05v38")
 columns = 7
 script = ExtResource("3_luhtr")
+
+[node name="HSeparator2" type="HSeparator" parent="."]
+layout_mode = 2
 
 [node name="Services" type="HBoxContainer" parent="."]
 layout_mode = 2

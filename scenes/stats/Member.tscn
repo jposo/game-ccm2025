@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dst8kgav7d10h"]
+[gd_scene load_steps=8 format=3 uid="uid://dst8kgav7d10h"]
 
 [ext_resource type="Script" path="res://src/stat.gd" id="1_1nkac"]
 [ext_resource type="Texture2D" uid="uid://b4iw3ikjb68kb" path="res://assets/SpriteSheet/Happy-face.png" id="2_sjnno"]
@@ -25,6 +25,11 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="Theme" id="Theme_65nxd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2smgk"]
+bg_color = Color(0.254147, 0.999999, 0.322556, 1)
+
 [node name="Member" type="VBoxContainer"]
 script = ExtResource("1_1nkac")
 sname = "Familiar"
@@ -35,7 +40,7 @@ size_flags_horizontal = 4
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
+theme_override_constants/margin_bottom = 14
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer"]
 scale = Vector2(0.5, 0.5)
@@ -43,6 +48,16 @@ sprite_frames = SubResource("SpriteFrames_ir1w3")
 animation = &"happy"
 frame_progress = 0.723989
 centered = false
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_65nxd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2smgk")
+step = 1.0
+value = 50.0
+show_percentage = false
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
