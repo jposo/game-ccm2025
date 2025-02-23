@@ -7,6 +7,7 @@ var money: Money
 var day_manager: DayManager
 var day := 1
 var cash := 1000
+
 var members = {
 	"familiar_1": {
 		"name": "You",
@@ -22,9 +23,9 @@ var members = {
 	},
 }
 
-func increase_day() -> void:
+func increase_day(newCash: int) -> void:
 	day += 1
-	cash += 100
+	cash += newCash
 
 func get_day() -> int:
 	return day

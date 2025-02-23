@@ -16,5 +16,10 @@ func draw() -> void:
 	var event = events[key]
 	$Label.text = "%s %s" % [event["message"], event["prompt"]["message"]]
 	for outcome in event["prompt"]["outcomes"]:
-		if outcome["result"]:
-			print("Do thing")
+		if outcome["description"]:
+			print(outcome["description"])
+			print(outcome["result"])
+
+
+func _on_button_button_up() -> void:
+	pass # Replace with function body.

@@ -125,7 +125,8 @@
 		},
 		{
 		  "description": "Skip the purchases for now.",
-		  "result": []
+		  "result": [
+			{"newOption": "Purchases", "stat":"money", "delta": -80}]
 		}
 	  ]
 	}
@@ -152,7 +153,7 @@
 		{
 		  "description": "Give $10 to the homeless person.",
 		  "result": [
-			{ "stat": "money", "delta": -10, "member": "you" }
+			{ "stat": "money", "delta": -10, "member": "you", "homelessHelp": 1 }
 		  ]
 		},
 		{
