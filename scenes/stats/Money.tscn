@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://c7t2wuvpjtdua" path="res://assets/Sprites/Content/Items/2.png" id="2_jmxug"]
 
 [node name="Money" type="HBoxContainer"]
-theme_override_constants/separation = 8
 script = ExtResource("1_k7b00")
 
 [node name="TextureRect" type="TextureRect" parent="."]

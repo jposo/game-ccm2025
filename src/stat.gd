@@ -1,4 +1,4 @@
-extends HBoxContainer
+extends Node
 
 class_name Stat
 
@@ -7,3 +7,5 @@ class_name Stat
 
 func _ready():
 	$Label.text = sname
+	if $MarginContainer/AnimatedSprite2D != null:
+		$MarginContainer/AnimatedSprite2D.play()

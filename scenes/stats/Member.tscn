@@ -25,13 +25,13 @@ animations = [{
 "speed": 2.0
 }]
 
-[node name="Member" type="HBoxContainer"]
-theme_override_constants/separation = 8
+[node name="Member" type="VBoxContainer"]
 script = ExtResource("1_1nkac")
 sname = "Familiar"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
@@ -41,11 +41,11 @@ theme_override_constants/margin_bottom = 12
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ir1w3")
 animation = &"happy"
-frame_progress = 0.940017
-speed_scale = 0.5
+frame_progress = 0.723989
 centered = false
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "TEST"
+horizontal_alignment = 1

@@ -14,6 +14,8 @@ config/name="Water Game"
 run/main_scene="res://scenes/Main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+config/size/viewport_height=648
+config/size/viewport_width=1152
 
 [autoload]
 

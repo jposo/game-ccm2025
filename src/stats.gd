@@ -1,13 +1,13 @@
-extends VBoxContainer
+extends HBoxContainer
 
 class_name Stats
 
 var stats = {
-	"money": {
-		"name": "",
-		"value": 500,
-		"node": "res://scenes/stats/Money.tscn",
-	},
+	#"money": {
+		#"name": "",
+		#"value": 500,
+		#"node": "res://scenes/stats/Money.tscn",
+	#},
 	"familiar_1": {
 		"name": "You",
 		"value": 80,
