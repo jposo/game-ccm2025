@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c87hofpdh6spt"]
+[gd_scene load_steps=4 format=3 uid="uid://c87hofpdh6spt"]
 
 [ext_resource type="FontFile" uid="uid://bvbmtb3lji302" path="res://assets/Fonts/PixelizedHandwritingRegular-8jz2.ttf" id="1_3mjon"]
+[ext_resource type="Script" path="res://src/continue.gd" id="2_xxwv5"]
 
 [sub_resource type="Theme" id="Theme_8qt57"]
 default_font = ExtResource("1_3mjon")
@@ -9,8 +10,15 @@ default_font_size = 36
 [node name="RightSide" type="VBoxContainer"]
 theme = SubResource("Theme_8qt57")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="RichTextLabel" parent="."]
 layout_mode = 2
-text = "dasdaskldlajskdkjaskdadlaldaddasd"
-visible_characters = 0
-visible_ratio = 0.0
+bbcode_enabled = true
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex "
+fit_content = true
+
+[node name="Continue" type="Button" parent="."]
+layout_mode = 2
+text = "Next Day"
+script = ExtResource("2_xxwv5")
+
+[connection signal="button_up" from="Continue" to="Continue" method="_on_button_up"]

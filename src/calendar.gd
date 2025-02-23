@@ -1,13 +1,23 @@
 extends GridContainer
 
+class_name Calendar
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for i in range(1, 32):
-		var lb = Label.new()
-		lb.text = "%s" % i
-		add_child(lb)
+	Global.calendar = self
+	draw()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+func draw():
+	# Remove children
+	for n in get_children():
+		remove_child(n)
+		n.queue_free() 
+	# Draw cells
+	for i in range(1, 32):
+		var lb = Label.new()
+		if i <= Global.get_day():
+			lb.set("theme_override_colors/font_color", Color.RED)
+		lb.text = "%s" % i
+		add_child(lb)

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cty46yv2ff8cw"]
+
+[ext_resource type="Script" path="res://src/stat.gd" id="1_okvep"]
+
+[resource]
+script = ExtResource("1_okvep")
+value = 500

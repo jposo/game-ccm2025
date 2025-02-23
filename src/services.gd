@@ -1,4 +1,4 @@
-extends HBoxContainer
+extends Control
 
 var services := [
 	"Water", 
@@ -9,9 +9,7 @@ var services := [
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for service in services:
-		var bt = Button.new()
-		bt.text = service
-		add_child(bt)
+		$OptionButton.add_item(service)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

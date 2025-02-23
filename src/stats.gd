@@ -3,30 +3,34 @@ extends VBoxContainer
 class_name Stats
 
 var stats = {
+	"money": {
+		"name": "",
+		"value": 500,
+		"node": "res://scenes/stats/Money.tscn",
+	},
 	"familiar_1": {
 		"name": "Familiar 1",
 		"value": 100,
-		"texture": "res://assets/Sprites/Content/Hearts/Health Heart/Idle/1.png"
+		"node": "res://scenes/stats/Member.tscn"
 	},
 	"familiar_2": {
 		"name": "Familiar 2",
 		"value": 100,
-		"texture": "res://assets/Sprites/Content/Hearts/Health Heart/Idle/1.png"
+		"node": "res://scenes/stats/Member.tscn"
 	}
 }
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for stat_key in stats.keys():
-		var tr := TextureRect.new()
-		tr.texture = load(stats[stat_key]["texture"])
-		tr.set_expand_mode(TextureRect.EXPAND_FIT_WIDTH)
-		var lb := Label.new()
-		lb.text = stats[stat_key]["name"]
-		var hbox = HBoxContainer.new()
-		hbox.add_child(tr)
-		hbox.add_child(lb)
-		add_child(hbox)
+		var stat = stats[stat_key]
+		var scene: PackedScene = load(stat["node"])
+		var node = scene.instantiate()
+		if stat["name"] == "":
+			node.sname = "%s" % stat["value"]
+		else:
+			node.sname = stat["name"]
+		add_child(node)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
