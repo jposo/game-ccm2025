@@ -29,7 +29,7 @@ text = "Option 2"
 autowrap_mode = 2
 script = ExtResource("4_1xnwl")
 
-[connection signal="button_up" from="Continue" to="Continue" method="_on_button_up_update"]
 [connection signal="button_up" from="Continue" to="Continue" method="_on_button_up"]
-[connection signal="button_up" from="Button" to="Button" method="_on_button_up_update"]
+[connection signal="button_up" from="Continue" to="Continue" method="_on_button_up_update"]
 [connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up_update"]

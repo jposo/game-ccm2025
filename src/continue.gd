@@ -40,7 +40,7 @@ func update_button_text() -> void:
 							newStatSon += res["delta"]
 
 func _on_button_up() -> void:
-	Global.increase_day(newCash, newStatYou, newStatWife, newStatSon)
+	Global.increase_day(newCash, newStatYou, newStatWife, newStatSon, false, false, false, false, false, false)
 	Global.calendar.draw()
 	Global.stats.draw()
 	Global.money.draw()
