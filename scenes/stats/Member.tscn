@@ -31,6 +31,17 @@ animations = [{
 bg_color = Color(0.254147, 0.999999, 0.322556, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kyetj"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [node name="Member" type="VBoxContainer"]
 script = ExtResource("1_1nkac")
@@ -48,7 +59,7 @@ theme_override_constants/margin_bottom = 14
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ir1w3")
 animation = &"happy"
-frame_progress = 0.723989
+frame_progress = 0.92543
 centered = false
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
@@ -69,3 +80,4 @@ horizontal_alignment = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kyetj")
+animation = &"new_animation"

@@ -421,5 +421,213 @@
 		}
 	  ]
 	}
+  },
+"22": {
+	"message": "The city's air is extremely polluted due to factories continuously emitting CO2 waste. The entire city is under lockdown, you have no job, and your son has no school. The fear for health begins.",
+	"prompt": {
+	  "message": "Chaos and uncertainty grip your family as the city descends into disorder.",
+	  "outcomes": [
+		{
+		  "description": "Accept the situation and carry on with the day.",
+		  "result": [
+			{ "stat": "health", "delta": -5, "member": "you" },
+			{ "stat": "health", "delta": -5, "member": "wife" },
+			{ "stat": "health", "delta": -5, "member": "son" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "23": {
+	"message": "An extreme heat wave breaks out.",
+	"prompt": {
+	  "message": "You must decide how to face the scorching heat that is pounding the city.",
+	  "outcomes": [
+		{
+		  "description": "Buy a second air conditioner to withstand the high temperatures.",
+		  "result": [
+			{ "stat": "money", "delta": -150, "member": "you" }
+		  ]
+		},
+		{
+		  "description": "Save the money and endure the heat, sacrificing your family's well-being.",
+		  "result": [
+			{ "stat": "health", "delta": -10, "member": "you" },
+			{ "stat": "health", "delta": -10, "member": "wife" },
+			{ "stat": "health", "delta": -10, "member": "son" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "24": {
+	"message": "You forgot to buy groceries and the week's food supply has run out.",
+	"prompt": {
+	  "message": "Decide how to resolve the food crisis at home.",
+	  "outcomes": [
+		{
+		  "description": "Buy groceries to ensure your family is well fed.",
+		  "result": [
+			{ "stat": "money", "delta": -120, "member": "you" }
+		  ]
+		},
+		{
+		  "description": "Rely on fast food, which is cheaper but harms your family's well-being.",
+		  "result": [
+			{ "stat": "money", "delta": -40, "member": "you" },
+			{ "stat": "health", "delta": -10, "member": "you" },
+			{ "stat": "health", "delta": -10, "member": "wife" },
+			{ "stat": "health", "delta": -10, "member": "son" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "25": {
+	"message": "You leave for work and witness chaos in the city: food shortages, desperate people turning aggressive, and safe drinking water compromised by a chemical spill nearby.",
+	"prompt": {
+	  "message": "Decide how to protect your family in the face of deteriorating basic resources.",
+	  "outcomes": [
+		{
+		  "description": "Buy a water filter to ensure your family’s safety.",
+		  "result": [
+			{ "stat": "money", "delta": -300, "member": "you" },
+			{ "stat": "health", "delta": 10, "member": "you" },
+			{ "stat": "health", "delta": 10, "member": "wife" },
+			{ "stat": "health", "delta": 10, "member": "son" }
+		  ]
+		},
+		{
+		  "description": "Take the risk and continue without protection.",
+		  "result": [
+			{ "stat": "health", "delta": -15, "member": "you" },
+			{ "stat": "health", "delta": -15, "member": "wife" },
+			{ "stat": "health", "delta": -15, "member": "son" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "26": {
+	"message": "Your son mentions that he is beginning to get scared by what he hears at school. A peaceful protest against the city's pollution is underway. Things are getting intense, and your gas supplier is facing problems that may leave you without gas for several days.",
+	"prompt": {
+	  "message": "Decide how to handle food consumption amid the growing unrest and gas shortage.",
+	  "outcomes": [
+		{
+		  "description": "Spend extra on outside food.",
+		  "result": [
+			{ "stat": "money", "delta": -50, "member": "you" }
+		  ]
+		},
+		{
+		  "description": "Eat only cold foods, sacrificing your family’s well-being.",
+		  "result": [
+			{ "stat": "health", "delta": -15, "member": "you" },
+			{ "stat": "health", "delta": -15, "member": "wife" },
+			{ "stat": "health", "delta": -15, "member": "son" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "27": {
+	"message": "Discouragement permeates as society struggles, and you try to lift your family's spirits.",
+	"prompt": {
+	  "message": "Decide how to brighten the day despite the surrounding chaos.",
+	  "outcomes": [
+		{
+		  "description": "Propose a trip to San Miguel, a nearby city where you can enjoy a pleasant day.",
+		  "result": [
+			{ "stat": "money", "delta": -300, "member": "you" },
+			{ "stat": "health", "delta": 30, "member": "you" },
+			{ "stat": "health", "delta": 30, "member": "wife" },
+			{ "stat": "health", "delta": 30, "member": "son" }
+		  ]
+		},
+		{
+		  "description": "Decide to stay home and face the day as it comes.",
+		  "result": [
+			{ "stat": "health", "delta": -5, "member": "you" },
+			{ "stat": "health", "delta": -5, "member": "wife" },
+			{ "stat": "health", "delta": -5, "member": "son" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "28": {
+	"message": "You fill up your gas tank.",
+	"prompt": {
+	  "message": "Take a moment to refuel your vehicle.",
+	  "outcomes": [
+		{
+		  "description": "Fill up the gas tank.",
+		  "result": [
+			{ "stat": "money", "delta": -40, "member": "you" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "29": {
+	"message": "Gas returns. However, the population is forced to pay an extra fee for repairs; you must pay today or risk having your service cut off tomorrow.",
+	"prompt": {
+	  "message": "Decide whether to pay the extra fee immediately or postpone the payment.",
+	  "outcomes": [
+		{
+		  "description": "Make the payment on the same day.",
+		  "result": [
+			{ "stat": "money", "delta": -50, "member": "you" }
+		  ]
+		},
+		{
+		  "description": "Do not pay immediately, risking a drop in well-being.",
+		  "result": [
+			{ "stat": "health", "delta": -5, "member": "you" },
+			{ "stat": "health", "delta": -5, "member": "wife" },
+			{ "stat": "health", "delta": -5, "member": "son" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "30": {
+	"message": "On your way to work, you find that the place is on fire; people are in chaos, the heat is LITERALLY unbearable, and resources in the city are insufficient. The government is at a loss, and local institutions are being looted and burned as people fight to be heard. Your boss tells you that he cannot pay you because the once-respected company you built no longer exists. You are now jobless.",
+	"prompt": {
+	  "message": "The loss of employment and the overwhelming chaos hit you hard.",
+	  "outcomes": [
+		{
+		  "description": "Accept the situation and continue despite the emotional toll.",
+		  "result": [
+			{ "stat": "health", "delta": -10, "member": "you" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "31": {
+	"message": "The city has descended into complete chaos, no one feels safe, resources are scarce, and only those with the most money can survive.",
+	"prompt": {
+	  "message": "Decide how to protect your family in these final days of utter disorder.",
+	  "outcomes": [
+		{
+		  "description": "Seek refuge in a secure shelter, spending money but boosting your family's well-being.",
+		  "result": [
+			{ "stat": "money", "delta": -200, "member": "you" },
+			{ "stat": "health", "delta": 15, "member": "you" },
+			{ "stat": "health", "delta": 15, "member": "wife" },
+			{ "stat": "health", "delta": 15, "member": "son" }
+		  ]
+		},
+		{
+		  "description": "Do not seek refuge and risk facing the chaos on the streets.",
+		  "result": [
+			{ "stat": "health", "delta": -20, "member": "you" },
+			{ "stat": "health", "delta": -20, "member": "wife" },
+			{ "stat": "health", "delta": -20, "member": "son" }
+		  ]
+		}
+	  ]
+	}
   }
 }
