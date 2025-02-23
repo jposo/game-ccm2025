@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dst8kgav7d10h"]
+[gd_scene load_steps=9 format=3 uid="uid://dst8kgav7d10h"]
 
 [ext_resource type="Script" path="res://src/stat.gd" id="1_1nkac"]
 [ext_resource type="Texture2D" uid="uid://b4iw3ikjb68kb" path="res://assets/SpriteSheet/Happy-face.png" id="2_sjnno"]
@@ -29,6 +29,8 @@ animations = [{
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2smgk"]
 bg_color = Color(0.254147, 0.999999, 0.322556, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kyetj"]
 
 [node name="Member" type="VBoxContainer"]
 script = ExtResource("1_1nkac")
@@ -64,3 +66,6 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "TEST"
 horizontal_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kyetj")

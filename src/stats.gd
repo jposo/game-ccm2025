@@ -21,7 +21,8 @@ func draw() -> void:
 		var scene: PackedScene = load(stat["node"])
 		var node = scene.instantiate()
 		if stat["name"] == "":
-			node.sname = "%s" % stat["value"]
+			node.sname = "%s" % stat["name"]
 		else:
-			node.sname = stat["name"]
+			node.sname = "%s" % stat["name"]
+			node.value = stat["value"]
 		add_child(node)
