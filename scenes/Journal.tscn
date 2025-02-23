@@ -1,24 +1,72 @@
-[gd_scene load_steps=5 format=3 uid="uid://bv0f40mwjrbn"]
+[gd_scene load_steps=12 format=3 uid="uid://bv0f40mwjrbn"]
 
 [ext_resource type="Script" path="res://src/journal.gd" id="1_ikq4n"]
 [ext_resource type="Texture2D" uid="uid://g8gkjr8ufos3" path="res://assets/Sprites/Inventory Book/Idle/1.png" id="2_884ax"]
 [ext_resource type="PackedScene" uid="uid://23qkv5kt25vd" path="res://scenes/LeftSide.tscn" id="4_2ya0l"]
 [ext_resource type="PackedScene" uid="uid://c87hofpdh6spt" path="res://scenes/RightSide.tscn" id="4_jaoic"]
+[ext_resource type="Texture2D" uid="uid://fsq1ibkh5d6t" path="res://assets/Sprites/Inventory Book/Open & Close/Style 1/Open/1.png" id="5_gxvj5"]
+[ext_resource type="Texture2D" uid="uid://h7ohfgnfv6c6" path="res://assets/Sprites/Inventory Book/Open & Close/Style 1/Open/2.png" id="6_il20t"]
+[ext_resource type="Texture2D" uid="uid://8rabnpiahfmc" path="res://assets/Sprites/Inventory Book/Open & Close/Style 1/Open/3.png" id="7_5cv1k"]
+[ext_resource type="Texture2D" uid="uid://paeqcq6a5dq7" path="res://assets/Sprites/Inventory Book/Open & Close/Style 1/Open/4.png" id="8_gs63b"]
+[ext_resource type="Texture2D" uid="uid://6q2w7bq2h4m3" path="res://assets/Sprites/Inventory Book/Open & Close/Style 1/Open/5.png" id="9_q42s4"]
+[ext_resource type="Texture2D" uid="uid://b36nidicqe7oq" path="res://assets/Sprites/Inventory Book/Open & Close/Style 1/Open/6.png" id="10_hmrd6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u03il"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_gxvj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_il20t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5cv1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gs63b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_q42s4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hmrd6")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Journal" type="Node2D"]
 script = ExtResource("1_ikq4n")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2.3, 2.3)
+sprite_frames = SubResource("SpriteFrames_u03il")
+frame = 5
+frame_progress = 1.0
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2.3, 2.3)
 texture = ExtResource("2_884ax")
 
-[node name="LeftSide" parent="." instance=ExtResource("4_2ya0l")]
-offset_left = -312.0
-offset_top = -128.0
-offset_right = -49.0
-offset_bottom = -12.0
+[node name="Content" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="RightSide" parent="." instance=ExtResource("4_jaoic")]
-offset_left = 32.0
-offset_top = -120.0
-offset_right = 272.0
-offset_bottom = -52.0
+[node name="LeftSide" parent="Content" instance=ExtResource("4_2ya0l")]
+layout_mode = 0
+offset_left = -696.0
+offset_top = -288.0
+offset_right = -128.0
+offset_bottom = 4.0
+
+[node name="RightSide" parent="Content" instance=ExtResource("4_jaoic")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = -304.0
+offset_right = 624.0
+offset_bottom = 325.0

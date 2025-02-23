@@ -8,7 +8,7 @@
 
 [node name="LeftSide" type="VBoxContainer"]
 theme = ExtResource("2_mv8ld")
-theme_override_constants/separation = 8
+theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
@@ -20,7 +20,7 @@ horizontal_alignment = 1
 [node name="Stats" type="HBoxContainer" parent="."]
 layout_mode = 2
 theme = ExtResource("2_mv8ld")
-theme_override_constants/separation = 16
+theme_override_constants/separation = 40
 alignment = 1
 script = ExtResource("2_oaogj")
 
@@ -47,6 +47,7 @@ layout_mode = 2
 
 [node name="Services" type="HBoxContainer" parent="."]
 layout_mode = 2
+theme_override_constants/separation = 16
 script = ExtResource("4_tq0el")
 
 [node name="Label" type="Label" parent="Services"]
