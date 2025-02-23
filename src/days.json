@@ -19,8 +19,8 @@
 		{
 		  "description": "You appreciate the gesture and feel revitalized.",
 		  "result": [
-			{ "stat": "health", "delta": 10, "member": "you" },
-			{ "stat": "health", "delta": 10, "member": "wife" }
+			{ "stat": "health", "delta": 20, "member": "you" },
+			{ "stat": "health", "delta": 20, "member": "wife" }
 		  ]
 		}
 	  ]
@@ -41,7 +41,7 @@
 		{
 		  "description": "Go to the work meeting.",
 		  "result": [
-			{ "stat": "health", "delta": -10, "member": "son" }
+			{ "stat": "health", "delta": -15, "member": "son" }
 		  ]
 		}
 	  ]
@@ -55,7 +55,7 @@
 		{
 		  "description": "Go to work, risking your health (50% chance of illness).",
 		  "result": [
-			{ "stat": "health", "delta": -15, "member": "you" }
+			{ "stat": "health", "delta": -25, "member": "you" }
 		  ]
 		},
 		{
@@ -76,9 +76,9 @@
 		  "description": "Stay for overtime and receive a bonus of $200, but lose family time.",
 		  "result": [
 			{ "stat": "money", "delta": 200, "member": "you" },
-			{ "stat": "health", "delta": -5, "member": "you" },
-			{ "stat": "health", "delta": -5, "member": "wife" },
-			{ "stat": "health", "delta": -5, "member": "son" }
+			{ "stat": "health", "delta": -10, "member": "you" },
+			{ "stat": "health", "delta": -10, "member": "wife" },
+			{ "stat": "health", "delta": -10, "member": "son" }
 		  ]
 		},
 		{
@@ -97,16 +97,16 @@
 		  "description": "Romantic outing with your wife.",
 		  "result": [
 			{ "stat": "money", "delta": -100, "member": "you" },
-			{ "stat": "health", "delta": 20, "member": "wife" },
-			{ "stat": "health", "delta": 10, "member": "you" }
+			{ "stat": "health", "delta": 30, "member": "wife" },
+			{ "stat": "health", "delta": 30, "member": "you" }
 		  ]
 		},
 		{
 		  "description": "Go to the park to play with your son and wife.",
 		  "result": [
-			{ "stat": "health", "delta": 10, "member": "you" },
-			{ "stat": "health", "delta": 10, "member": "wife" },
-			{ "stat": "health", "delta": 10, "member": "son" }
+			{ "stat": "health", "delta": 15, "member": "you" },
+			{ "stat": "health", "delta": 15, "member": "wife" },
+			{ "stat": "health", "delta": 15, "member": "son" }
 		  ]
 		}
 	  ]
@@ -176,23 +176,23 @@
 		  "description": "You take a bath.",
 		  "result": [
 			{ "stat": "health", "delta": 0, "member": "you" },
-			{ "stat": "health", "delta": -5, "member": "wife" },
-			{ "stat": "health", "delta": -5, "member": "son" }
+			{ "stat": "health", "delta": -10, "member": "wife" },
+			{ "stat": "health", "delta": -10, "member": "son" }
 		  ]
 		},
 		{
 		  "description": "Your wife takes a bath.",
 		  "result": [
-			{ "stat": "health", "delta": -5, "member": "you" },
+			{ "stat": "health", "delta": -10, "member": "you" },
 			{ "stat": "health", "delta": 0, "member": "wife" },
-			{ "stat": "health", "delta": -5, "member": "son" }
+			{ "stat": "health", "delta": -10, "member": "son" }
 		  ]
 		},
 		{
 		  "description": "Your son takes a bath.",
 		  "result": [
-			{ "stat": "health", "delta": -5, "member": "you" },
-			{ "stat": "health", "delta": -5, "member": "wife" },
+			{ "stat": "health", "delta": -10, "member": "you" },
+			{ "stat": "health", "delta": -10, "member": "wife" },
 			{ "stat": "health", "delta": 0, "member": "son" }
 		  ]
 		}
@@ -205,16 +205,16 @@
 	  "message": "Choose between working overtime or resting at home.",
 	  "outcomes": [
 		{
-		  "description": "Stay and work overtime: +$100 but -10 to your health.",
+		  "description": "Stay and work overtime: +$100 but -15 to your health.",
 		  "result": [
 			{ "stat": "money", "delta": 100, "member": "you" },
-			{ "stat": "health", "delta": -10, "member": "you" }
+			{ "stat": "health", "delta": -20, "member": "you" }
 		  ]
 		},
 		{
 		  "description": "Go home to rest, gaining a small health boost.",
 		  "result": [
-			{ "stat": "health", "delta": 5, "member": "you" }
+			{ "stat": "health", "delta": 10, "member": "you" }
 		  ]
 		}
 	  ]
@@ -228,15 +228,15 @@
 		{
 		  "description": "Skip work and celebrate together, obtaining a double boost to both your well-being.",
 		  "result": [
-			{ "stat": "health", "delta": 20, "member": "you" },
-			{ "stat": "health", "delta": 20, "member": "wife" }
+			{ "stat": "health", "delta": 30, "member": "you" },
+			{ "stat": "health", "delta": 30, "member": "wife" }
 		  ]
 		},
 		{
 		  "description": "Go to work and receive a bonus of $150, but harming your wife's well-being.",
 		  "result": [
-			{ "stat": "money", "delta": 150, "member": "you" },
-			{ "stat": "health", "delta": -10, "member": "wife" }
+			{ "stat": "money", "delta": 200, "member": "you" },
+			{ "stat": "health", "delta": -20, "member": "wife" }
 		  ]
 		}
 	  ]
@@ -250,14 +250,14 @@
 		{
 		  "description": "Go out with your friends, gaining a personal well-being boost.",
 		  "result": [
-			{ "stat": "health", "delta": 20, "member": "you" }
+			{ "stat": "health", "delta": 30, "member": "you" }
 		  ]
 		},
 		{
 		  "description": "Stay at home and enjoy a movie with your family.",
 		  "result": [
-			{ "stat": "health", "delta": 10, "member": "wife" },
-			{ "stat": "health", "delta": 10, "member": "son" }
+			{ "stat": "health", "delta": 15, "member": "wife" },
+			{ "stat": "health", "delta": 15, "member": "son" }
 		  ]
 		}
 	  ]
@@ -308,15 +308,15 @@
 		  "description": "Help with dinner, improving both your and your wife's well-being.",
 		  "result": [
 			{ "stat": "money", "delta": -200, "member": "you" },
-			{ "stat": "health", "delta": 10, "member": "you" },
-			{ "stat": "health", "delta": 10, "member": "wife" }
+			{ "stat": "health", "delta": 15, "member": "you" },
+			{ "stat": "health", "delta": 15, "member": "wife" }
 		  ]
 		},
 		{
 		  "description": "Do not help with dinner, which negatively affects your wife's well-being.",
 		  "result": [
 			{ "stat": "money", "delta": -200, "member": "you" },
-			{ "stat": "health", "delta": -10, "member": "wife" }
+			{ "stat": "health", "delta": -20, "member": "wife" }
 		  ]
 		}
 	  ]
@@ -331,13 +331,13 @@
 		  "description": "Attend the tournament: increases your son's well-being but costs $50.",
 		  "result": [
 			{ "stat": "money", "delta": -50, "member": "you" },
-			{ "stat": "health", "delta": 10, "member": "son" }
+			{ "stat": "health", "delta": 20, "member": "son" }
 		  ]
 		},
 		{
 		  "description": "Do not attend, which significantly reduces your son's well-being.",
 		  "result": [
-			{ "stat": "health", "delta": -20, "member": "son" }
+			{ "stat": "health", "delta": -15, "member": "son" }
 		  ]
 		}
 	  ]
@@ -358,9 +358,9 @@
 		  "description": "Do not repair the car and use ride-sharing apps, incurring $10 per trip and -3 well-being points for everyone.",
 		  "result": [
 			{ "stat": "money", "delta": -10, "member": "you" },
-			{ "stat": "health", "delta": -3, "member": "you" },
-			{ "stat": "health", "delta": -3, "member": "wife" },
-			{ "stat": "health", "delta": -3, "member": "son" }
+			{ "stat": "health", "delta": -6, "member": "you" },
+			{ "stat": "health", "delta": -6, "member": "wife" },
+			{ "stat": "health", "delta": -6, "member": "son" }
 		  ]
 		}
 	  ]
@@ -375,9 +375,9 @@
 		  "description": "Go to the cinema with the family, with a cost of $50 and a boost in well-being for everyone.",
 		  "result": [
 			{ "stat": "money", "delta": -50, "member": "you" },
-			{ "stat": "health", "delta": 10, "member": "you" },
-			{ "stat": "health", "delta": 10, "member": "wife" },
-			{ "stat": "health", "delta": 10, "member": "son" }
+			{ "stat": "health", "delta": 15, "member": "you" },
+			{ "stat": "health", "delta": 15, "member": "wife" },
+			{ "stat": "health", "delta": 15, "member": "son" }
 		  ]
 		},
 		{
@@ -441,9 +441,9 @@
 		{
 		  "description": "Accept the situation and carry on with the day.",
 		  "result": [
-			{ "stat": "health", "delta": -5, "member": "you" },
-			{ "stat": "health", "delta": -5, "member": "wife" },
-			{ "stat": "health", "delta": -5, "member": "son" }
+			{ "stat": "health", "delta": -10, "member": "you" },
+			{ "stat": "health", "delta": -10, "member": "wife" },
+			{ "stat": "health", "delta": -10, "member": "son" }
 		  ]
 		}
 	  ]
@@ -463,9 +463,9 @@
 		{
 		  "description": "Save the money and endure the heat, sacrificing your family's well-being.",
 		  "result": [
-			{ "stat": "health", "delta": -10, "member": "you" },
-			{ "stat": "health", "delta": -10, "member": "wife" },
-			{ "stat": "health", "delta": -10, "member": "son" }
+			{ "stat": "health", "delta": -20, "member": "you" },
+			{ "stat": "health", "delta": -20, "member": "wife" },
+			{ "stat": "health", "delta": -20, "member": "son" }
 		  ]
 		}
 	  ]
@@ -486,9 +486,9 @@
 		  "description": "Rely on fast food, which is cheaper but harms your family's well-being.",
 		  "result": [
 			{ "stat": "money", "delta": -40, "member": "you" },
-			{ "stat": "health", "delta": -10, "member": "you" },
-			{ "stat": "health", "delta": -10, "member": "wife" },
-			{ "stat": "health", "delta": -10, "member": "son" }
+			{ "stat": "health", "delta": -20, "member": "you" },
+			{ "stat": "health", "delta": -20, "member": "wife" },
+			{ "stat": "health", "delta": -20, "member": "son" }
 		  ]
 		}
 	  ]
@@ -503,17 +503,17 @@
 		  "description": "Buy a water filter to ensure your family’s safety.",
 		  "result": [
 			{ "stat": "money", "delta": -300, "member": "you" },
-			{ "stat": "health", "delta": 10, "member": "you" },
-			{ "stat": "health", "delta": 10, "member": "wife" },
-			{ "stat": "health", "delta": 10, "member": "son" }
+			{ "stat": "health", "delta": 20, "member": "you" },
+			{ "stat": "health", "delta": 20, "member": "wife" },
+			{ "stat": "health", "delta": 20, "member": "son" }
 		  ]
 		},
 		{
 		  "description": "Take the risk and continue without protection.",
 		  "result": [
-			{ "stat": "health", "delta": -15, "member": "you" },
-			{ "stat": "health", "delta": -15, "member": "wife" },
-			{ "stat": "health", "delta": -15, "member": "son" }
+			{ "stat": "health", "delta": -25, "member": "you" },
+			{ "stat": "health", "delta": -25, "member": "wife" },
+			{ "stat": "health", "delta": -25, "member": "son" }
 		  ]
 		}
 	  ]
@@ -533,9 +533,9 @@
 		{
 		  "description": "Eat only cold foods, sacrificing your family’s well-being.",
 		  "result": [
-			{ "stat": "health", "delta": -15, "member": "you" },
-			{ "stat": "health", "delta": -15, "member": "wife" },
-			{ "stat": "health", "delta": -15, "member": "son" }
+			{ "stat": "health", "delta": -25, "member": "you" },
+			{ "stat": "health", "delta": -25, "member": "wife" },
+			{ "stat": "health", "delta": -25, "member": "son" }
 		  ]
 		}
 	  ]
@@ -550,17 +550,17 @@
 		  "description": "Propose a trip to San Miguel, a nearby city where you can enjoy a pleasant day.",
 		  "result": [
 			{ "stat": "money", "delta": -300, "member": "you" },
-			{ "stat": "health", "delta": 30, "member": "you" },
-			{ "stat": "health", "delta": 30, "member": "wife" },
-			{ "stat": "health", "delta": 30, "member": "son" }
+			{ "stat": "health", "delta": 40, "member": "you" },
+			{ "stat": "health", "delta": 40, "member": "wife" },
+			{ "stat": "health", "delta": 40, "member": "son" }
 		  ]
 		},
 		{
 		  "description": "Decide to stay home and face the day as it comes.",
 		  "result": [
-			{ "stat": "health", "delta": -5, "member": "you" },
-			{ "stat": "health", "delta": -5, "member": "wife" },
-			{ "stat": "health", "delta": -5, "member": "son" }
+			{ "stat": "health", "delta": -15, "member": "you" },
+			{ "stat": "health", "delta": -15, "member": "wife" },
+			{ "stat": "health", "delta": -15, "member": "son" }
 		  ]
 		}
 	  ]
@@ -602,9 +602,9 @@
 		{
 		  "description": "Do not pay immediately, risking a drop in well-being.",
 		  "result": [
-			{ "stat": "health", "delta": -5, "member": "you" },
-			{ "stat": "health", "delta": -5, "member": "wife" },
-			{ "stat": "health", "delta": -5, "member": "son" }
+			{ "stat": "health", "delta": -15, "member": "you" },
+			{ "stat": "health", "delta": -15, "member": "wife" },
+			{ "stat": "health", "delta": -15, "member": "son" }
 		  ]
 		}
 	  ]
@@ -633,17 +633,17 @@
 		  "description": "Seek refuge in a secure shelter, spending money but boosting your family's well-being.",
 		  "result": [
 			{ "stat": "money", "delta": -200, "member": "you" },
-			{ "stat": "health", "delta": 15, "member": "you" },
-			{ "stat": "health", "delta": 15, "member": "wife" },
-			{ "stat": "health", "delta": 15, "member": "son" }
+			{ "stat": "health", "delta": 25, "member": "you" },
+			{ "stat": "health", "delta": 25, "member": "wife" },
+			{ "stat": "health", "delta": 25, "member": "son" }
 		  ]
 		},
 		{
 		  "description": "Do not seek refuge and risk facing the chaos on the streets.",
 		  "result": [
-			{ "stat": "health", "delta": -20, "member": "you" },
-			{ "stat": "health", "delta": -20, "member": "wife" },
-			{ "stat": "health", "delta": -20, "member": "son" }
+			{ "stat": "health", "delta": -10, "member": "you" },
+			{ "stat": "health", "delta": -10, "member": "wife" },
+			{ "stat": "health", "delta": -10, "member": "son" }
 		  ]
 		}
 	  ]

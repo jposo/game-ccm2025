@@ -27,6 +27,7 @@ theme_override_font_sizes/font_size = 72
 text = "Start"
 
 [node name="Button2" type="Button" parent="."]
+layout_mode = 0
 offset_left = 80.0
 offset_top = 480.0
 offset_right = 456.0
