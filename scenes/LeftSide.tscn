@@ -11,6 +11,7 @@ default_font_size = 36
 
 [node name="LeftSide" type="VBoxContainer"]
 theme = SubResource("Theme_8qt57")
+theme_override_constants/separation = 8
 
 [node name="Stats" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -21,11 +22,14 @@ layout_mode = 2
 columns = 7
 script = ExtResource("3_luhtr")
 
-[node name="Services" type="Control" parent="."]
+[node name="Services" type="HBoxContainer" parent="."]
 layout_mode = 2
 script = ExtResource("4_tq0el")
 
+[node name="Label" type="Label" parent="Services"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Services"
+
 [node name="OptionButton" type="OptionButton" parent="Services"]
-layout_mode = 0
-offset_right = 32.0
-offset_bottom = 20.0
+layout_mode = 2

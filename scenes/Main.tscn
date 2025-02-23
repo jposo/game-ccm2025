@@ -6,10 +6,10 @@
 [node name="Main" type="Node2D"]
 
 [node name="Journal" parent="." instance=ExtResource("1_wvm2k")]
-position = Vector2(600, 232)
-scale = Vector2(1.3, 1.3)
+position = Vector2(992, 392)
+scale = Vector2(2, 2)
 
 [node name="Background" parent="." instance=ExtResource("2_oh3la")]
 z_index = -50
-position = Vector2(576, 224)
-scale = Vector2(1.5, 1.5)
+position = Vector2(960, 464)
+scale = Vector2(2.495, 2.495)

@@ -9,19 +9,36 @@ var stats = {
 		"node": "res://scenes/stats/Money.tscn",
 	},
 	"familiar_1": {
-		"name": "Familiar 1",
-		"value": 100,
+		"name": "You",
+		"value": 80,
 		"node": "res://scenes/stats/Member.tscn"
 	},
 	"familiar_2": {
-		"name": "Familiar 2",
-		"value": 100,
+		"name": "Wife",
+		"value": 80,
+		"node": "res://scenes/stats/Member.tscn"
+	},
+	"familiar_3": {
+		"name": "Son",
+		"value": 80,
 		"node": "res://scenes/stats/Member.tscn"
 	}
 }
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Global.stats = self
+	draw()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+	
+func draw() -> void:
+	# Remove children
+	for n in get_children():
+		remove_child(n)
+		n.queue_free() 
 	for stat_key in stats.keys():
 		var stat = stats[stat_key]
 		var scene: PackedScene = load(stat["node"])
@@ -31,7 +48,3 @@ func _ready() -> void:
 		else:
 			node.sname = stat["name"]
 		add_child(node)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
