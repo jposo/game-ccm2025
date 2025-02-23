@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bv5jkbhj5tlaa"]
+[gd_scene load_steps=5 format=3 uid="uid://bv5jkbhj5tlaa"]
 
+[ext_resource type="Script" path="res://src/main.gd" id="1_vpbwh"]
 [ext_resource type="PackedScene" uid="uid://bv0f40mwjrbn" path="res://scenes/Journal.tscn" id="1_wvm2k"]
 [ext_resource type="PackedScene" uid="uid://xm3vhucafts8" path="res://scenes/Background.tscn" id="2_oh3la"]
 
+[sub_resource type="Theme" id="Theme_ygjo6"]
+default_font_size = 72
+
 [node name="Main" type="Node2D"]
+script = ExtResource("1_vpbwh")
 
 [node name="Journal" parent="." instance=ExtResource("1_wvm2k")]
 position = Vector2(1000, 424)
@@ -12,3 +17,29 @@ position = Vector2(1000, 424)
 z_index = -50
 position = Vector2(960, 464)
 scale = Vector2(2.495, 2.495)
+
+[node name="Popup" type="Popup" parent="."]
+title = "Game Ended"
+initial_position = 1
+size = Vector2i(720, 216)
+visible = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ygjo6")
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Popup/VBoxContainer"]
+layout_mode = 2
+text = "Game Ended"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Popup/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="Popup/VBoxContainer/Button" to="." method="_on_button_pressed"]

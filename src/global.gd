@@ -1,12 +1,15 @@
 extends Node
 
+var main: Main
 var journal: Journal
 var calendar: Calendar
 var stats: Stats
 var money: Money
 var day_manager: DayManager
+
 var day := 1
 var cash := 1000
+var game_ended := false
 
 var members = {
 	"familiar_1": {
@@ -71,9 +74,12 @@ var services := {
 }
 
 func increase_day(newCash: int, newStatYou: int, newStatWife: int, newStatSon: int) -> void:
+	if day > 31:
+		game_ended = true
+		return
 	day += 1
-	if day%7==0:
-		cash+=500
+	if day > 31:
+		game_ended = true
 	cash += newCash
 	if members["familiar_1"]["value"] + newStatYou > 100:
 		members["familiar_1"]["value"] = 100
@@ -92,4 +98,4 @@ func increase_day(newCash: int, newStatYou: int, newStatWife: int, newStatSon: i
 	
 
 func get_day() -> int:
-	return day
+	return min(day, 31)

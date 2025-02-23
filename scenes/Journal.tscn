@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bv0f40mwjrbn"]
+[gd_scene load_steps=11 format=3 uid="uid://bv0f40mwjrbn"]
 
 [ext_resource type="Script" path="res://src/journal.gd" id="1_ikq4n"]
-[ext_resource type="Texture2D" uid="uid://g8gkjr8ufos3" path="res://assets/Sprites/Inventory Book/Idle/1.png" id="2_884ax"]
 [ext_resource type="PackedScene" uid="uid://23qkv5kt25vd" path="res://scenes/LeftSide.tscn" id="4_2ya0l"]
 [ext_resource type="PackedScene" uid="uid://c87hofpdh6spt" path="res://scenes/RightSide.tscn" id="4_jaoic"]
 [ext_resource type="Texture2D" uid="uid://fsq1ibkh5d6t" path="res://assets/Sprites/Inventory Book/Open & Close/Style 1/Open/1.png" id="5_gxvj5"]
@@ -45,11 +44,6 @@ scale = Vector2(2.3, 2.3)
 sprite_frames = SubResource("SpriteFrames_u03il")
 frame = 5
 frame_progress = 1.0
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-scale = Vector2(2.3, 2.3)
-texture = ExtResource("2_884ax")
 
 [node name="Content" type="Control" parent="."]
 layout_mode = 3

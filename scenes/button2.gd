@@ -42,6 +42,8 @@ func update_button2_text() -> void:
 		visible = false 
 
 func _on_button_up() -> void:
+	if Global.game_ended:
+		return
 	Global.increase_day(newCash, newStatYou, newStatWife, newStatSon)
 	Global.calendar.draw()
 	Global.stats.draw()
@@ -52,3 +54,6 @@ func _on_button_up() -> void:
 	var option1_button = get_parent().get_node("Continue")
 	if option1_button:
 		option1_button.update_button_text()
+		
+	if Global.game_ended:
+		Global.main.show_popup()

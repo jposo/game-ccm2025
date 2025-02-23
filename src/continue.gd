@@ -17,6 +17,7 @@ func update_button_text() -> void:
 	var key = str(current_day)
 	var event = events[key]
 	
+	# Reinicia las variables
 	newCash = 0
 	newStatYou = 0
 	newStatWife = 0
@@ -40,6 +41,8 @@ func update_button_text() -> void:
 							newStatSon += res["delta"]
 
 func _on_button_up() -> void:
+	if Global.game_ended:
+		return
 	Global.increase_day(newCash, newStatYou, newStatWife, newStatSon)
 	Global.calendar.draw()
 	Global.stats.draw()
@@ -50,3 +53,6 @@ func _on_button_up() -> void:
 	var option2_button = get_parent().get_node("Button")
 	if option2_button:
 		option2_button.update_button2_text()
+		
+	if Global.game_ended:
+		Global.main.show_popup()
