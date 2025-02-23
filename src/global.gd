@@ -26,6 +26,50 @@ var members = {
 	},
 }
 
+enum ServiceType {
+	Weekly,
+	Monthly,
+}
+
+var services := {
+	"Water": {
+		"cost": 100,
+		"type": ServiceType.Weekly,
+		"lastPaid": 0,
+		"enabled": false,
+	},
+	"Gasoline": {
+		"cost": 300,
+		"type": ServiceType.Weekly,
+		"lastPaid": 0,
+		"enabled": false,
+	},
+	"Groceries": {
+		"cost": 100,
+		"type": ServiceType.Weekly,
+		"lastPaid": 0,
+		"enabled": false,
+	},
+	"Internet": {
+		"cost": 300,
+		"type": ServiceType.Monthly,
+		"lastPaid": 0,
+		"enabled": true,
+	},
+	"Rent": {
+		"cost": 1500,
+		"type": ServiceType.Monthly,
+		"lastPaid": 0,
+		"enabled": true,
+	},
+	"Electricity": {
+		"cost": 300,
+		"type": ServiceType.Monthly,
+		"lastPaid": 0,
+		"enabled": true,
+	},
+}
+
 func increase_day(newCash: int, newStatYou: int, newStatWife: int, newStatSon: int) -> void:
 	day += 1
 	if day%7==0:
