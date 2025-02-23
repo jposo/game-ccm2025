@@ -1,0 +1,424 @@
+{
+  "1": {
+	"message": "Currently, more than 2 billion people do not have access to safe drinking water.",
+	"prompt": {
+	  "message": "It's your first day at your new company [company name]. You arrive home excited to live this new future.",
+	  "outcomes": [
+		{
+		  "description": "Continue your day without changes.",
+		  "result": []
+		}
+	  ]
+	}
+  },
+  "2": {
+	"message": "You wake up and your wife greets you with a good morning and breakfast before you go to work.",
+	"prompt": {
+	  "message": "You enjoy a homemade breakfast that fills you with energy for the day.",
+	  "outcomes": [
+		{
+		  "description": "You appreciate the gesture and feel revitalized.",
+		  "result": [
+			{ "stat": "health", "delta": 10, "member": "you" },
+			{ "stat": "health", "delta": 10, "member": "wife" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "3": {
+	"message": "Your son asks you to accompany him to a school event, but you have an important meeting at work.",
+	"prompt": {
+	  "message": "You must decide whether to attend your son's school event or go to the work meeting.",
+	  "outcomes": [
+		{
+		  "description": "Go with your son to the school event.",
+		  "result": [
+			{ "stat": "money", "delta": -50, "member": "you" },
+			{ "stat": "health", "delta": 10, "member": "son" }
+		  ]
+		},
+		{
+		  "description": "Go to the work meeting.",
+		  "result": [
+			{ "stat": "health", "delta": -10, "member": "son" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "4": {
+	"message": "A contaminated air warning is issued and you must go out for work.",
+	"prompt": {
+	  "message": "Decide whether to risk your health by going out or stay at home and suffer a reduction in your weekly salary.",
+	  "outcomes": [
+		{
+		  "description": "Go to work, risking your health (50% chance of illness).",
+		  "result": [
+			{ "stat": "health", "delta": -15, "member": "you" }
+		  ]
+		},
+		{
+		  "description": "Stay at home, preserving your health but reducing your salary.",
+		  "result": [
+			{ "stat": "money", "delta": -40, "member": "you" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "5": {
+	"message": "It's a very busy workday.",
+	"prompt": {
+	  "message": "You can stay to work overtime and receive a bonus or leave on time.",
+	  "outcomes": [
+		{
+		  "description": "Stay for overtime and receive a bonus of $200, but lose family time.",
+		  "result": [
+			{ "stat": "money", "delta": 200, "member": "you" },
+			{ "stat": "health", "delta": -5, "member": "you" },
+			{ "stat": "health", "delta": -5, "member": "wife" },
+			{ "stat": "health", "delta": -5, "member": "son" }
+		  ]
+		},
+		{
+		  "description": "Leave on time, maintaining the routine without changes.",
+		  "result": []
+		}
+	  ]
+	}
+  },
+  "6": {
+	"message": "It's a quiet day to spend with your family.",
+	"prompt": {
+	  "message": "Choose how to enjoy the day.",
+	  "outcomes": [
+		{
+		  "description": "Romantic outing with your wife.",
+		  "result": [
+			{ "stat": "money", "delta": -100, "member": "you" },
+			{ "stat": "health", "delta": 20, "member": "wife" },
+			{ "stat": "health", "delta": 10, "member": "you" }
+		  ]
+		},
+		{
+		  "description": "Go to the park to play with your son and wife.",
+		  "result": [
+			{ "stat": "health", "delta": 10, "member": "you" },
+			{ "stat": "health", "delta": 10, "member": "wife" },
+			{ "stat": "health", "delta": 10, "member": "son" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "7": {
+	"message": "It's time to do the grocery shopping and fill up your gas tank!",
+	"prompt": {
+	  "message": "Decide whether to make the purchases.",
+	  "outcomes": [
+		{
+		  "description": "Make both purchases (groceries and gas).",
+		  "result": [
+			{ "stat": "money", "delta": -80, "member": "you" }
+		  ]
+		},
+		{
+		  "description": "Skip the purchases for now.",
+		  "result": []
+		}
+	  ]
+	}
+  },
+  "8": {
+	"message": "Week 2 - Water is becoming increasingly scarce and its cost is rising.",
+	"prompt": {
+	  "message": "You presented a successful project at work and received a bonus.",
+	  "outcomes": [
+		{
+		  "description": "You feel valued and receive a bonus of $50.",
+		  "result": [
+			{ "stat": "money", "delta": 50, "member": "you" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "9": {
+	"message": "A heat alert is issued and a homeless person asks for your help.",
+	"prompt": {
+	  "message": "After a calm day, a homeless person stops you asking for $10.",
+	  "outcomes": [
+		{
+		  "description": "Give $10 to the homeless person.",
+		  "result": [
+			{ "stat": "money", "delta": -10, "member": "you" }
+		  ]
+		},
+		{
+		  "description": "Ignore the homeless person and continue on your way.",
+		  "result": []
+		}
+	  ]
+	}
+  },
+  "10": {
+	"message": "A pipe broke and only one family member will be able to take a bath.",
+	"prompt": {
+	  "message": "Choose who will bathe today.",
+	  "outcomes": [
+		{
+		  "description": "You take a bath.",
+		  "result": [
+			{ "stat": "health", "delta": 0, "member": "you" },
+			{ "stat": "health", "delta": -5, "member": "wife" },
+			{ "stat": "health", "delta": -5, "member": "son" }
+		  ]
+		},
+		{
+		  "description": "Your wife takes a bath.",
+		  "result": [
+			{ "stat": "health", "delta": -5, "member": "you" },
+			{ "stat": "health", "delta": 0, "member": "wife" },
+			{ "stat": "health", "delta": -5, "member": "son" }
+		  ]
+		},
+		{
+		  "description": "Your son takes a bath.",
+		  "result": [
+			{ "stat": "health", "delta": -5, "member": "you" },
+			{ "stat": "health", "delta": -5, "member": "wife" },
+			{ "stat": "health", "delta": 0, "member": "son" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "11": {
+	"message": "It's a day with the possibility of overtime, and the encounter with the homeless person continues.",
+	"prompt": {
+	  "message": "Choose between working overtime or resting at home.",
+	  "outcomes": [
+		{
+		  "description": "Stay and work overtime: +$100 but -10 to your health.",
+		  "result": [
+			{ "stat": "money", "delta": 100, "member": "you" },
+			{ "stat": "health", "delta": -10, "member": "you" }
+		  ]
+		},
+		{
+		  "description": "Go home to rest, gaining a small health boost.",
+		  "result": [
+			{ "stat": "health", "delta": 5, "member": "you" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "12": {
+	"message": "Your wife asks you to skip work to celebrate your anniversary.",
+	"prompt": {
+	  "message": "You must choose between spending the day with her or fulfilling work obligations.",
+	  "outcomes": [
+		{
+		  "description": "Skip work and celebrate together, obtaining a double boost to both your well-being.",
+		  "result": [
+			{ "stat": "health", "delta": 20, "member": "you" },
+			{ "stat": "health", "delta": 20, "member": "wife" }
+		  ]
+		},
+		{
+		  "description": "Go to work and receive a bonus of $150, but harming your wife's well-being.",
+		  "result": [
+			{ "stat": "money", "delta": 150, "member": "you" },
+			{ "stat": "health", "delta": -10, "member": "wife" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "13": {
+	"message": "A friend invites you out, but your family had been expecting quality time with you.",
+	"prompt": {
+	  "message": "Choose between going out with friends or staying home to watch a movie with your family.",
+	  "outcomes": [
+		{
+		  "description": "Go out with your friends, gaining a personal well-being boost.",
+		  "result": [
+			{ "stat": "health", "delta": 20, "member": "you" }
+		  ]
+		},
+		{
+		  "description": "Stay at home and enjoy a movie with your family.",
+		  "result": [
+			{ "stat": "health", "delta": 10, "member": "wife" },
+			{ "stat": "health", "delta": 10, "member": "son" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "14": {
+	"message": "It's time to do the grocery shopping and fill up your gas tank!",
+	"prompt": {
+	  "message": "Decide whether to make the purchases.",
+	  "outcomes": [
+		{
+		  "description": "Make both purchases.",
+		  "result": [
+			{ "stat": "money", "delta": -80, "member": "you" }
+		  ]
+		},
+		{
+		  "description": "Skip the purchases.",
+		  "result": []
+		}
+	  ]
+	}
+  },
+  "15": {
+	"message": "Week 3 - The mayor declares a critical water alert and the heat intensifies the problems.",
+	"prompt": {
+	  "message": "Due to the heat, there was a power outage and your refrigerator broke down. You need to fix it.",
+	  "outcomes": [
+		{
+		  "description": "Repair the refrigerator, incurring a cost of $100.",
+		  "result": [
+			{ "stat": "money", "delta": -100, "member": "you" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "16": {
+	"message": "You were mugged and your wallet was taken, but upon arriving home, you are asked to cook dinner.",
+	"prompt": {
+	  "message": "Choose whether to help with dinner or not.",
+	  "outcomes": [
+		{
+		  "description": "Help with dinner, improving both your and your wife's well-being.",
+		  "result": [
+			{ "stat": "money", "delta": -200, "member": "you" },
+			{ "stat": "health", "delta": 10, "member": "you" },
+			{ "stat": "health", "delta": 10, "member": "wife" }
+		  ]
+		},
+		{
+		  "description": "Do not help with dinner, which negatively affects your wife's well-being.",
+		  "result": [
+			{ "stat": "money", "delta": -200, "member": "you" },
+			{ "stat": "health", "delta": -10, "member": "wife" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "17": {
+	"message": "It's your son's karate tournament, and attending might affect your workday.",
+	"prompt": {
+	  "message": "Decide whether to attend the tournament or not.",
+	  "outcomes": [
+		{
+		  "description": "Attend the tournament: increases your son's well-being but costs $50.",
+		  "result": [
+			{ "stat": "money", "delta": -50, "member": "you" },
+			{ "stat": "health", "delta": 10, "member": "son" }
+		  ]
+		},
+		{
+		  "description": "Do not attend, which significantly reduces your son's well-being.",
+		  "result": [
+			{ "stat": "health", "delta": -20, "member": "son" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "18": {
+	"message": "The car breaks down, causing a headache both economically and for the family's well-being.",
+	"prompt": {
+	  "message": "Choose between repairing the car or using ride-sharing apps temporarily.",
+	  "outcomes": [
+		{
+		  "description": "Hire a technician to repair the car (cost of $120).",
+		  "result": [
+			{ "stat": "money", "delta": -120, "member": "you" }
+		  ]
+		},
+		{
+		  "description": "Do not repair the car and use ride-sharing apps, incurring $10 per trip and -3 well-being points for everyone.",
+		  "result": [
+			{ "stat": "money", "delta": -10, "member": "you" },
+			{ "stat": "health", "delta": -3, "member": "you" },
+			{ "stat": "health", "delta": -3, "member": "wife" },
+			{ "stat": "health", "delta": -3, "member": "son" }
+		  ]
+		}
+	  ]
+	}
+  },
+  "19": {
+	"message": "A good day at work ends with your son's desire to go to the cinema.",
+	"prompt": {
+	  "message": "Decide whether to go to the cinema with the family or stay at home.",
+	  "outcomes": [
+		{
+		  "description": "Go to the cinema with the family, with a cost of $50 and a boost in well-being for everyone.",
+		  "result": [
+			{ "stat": "money", "delta": -50, "member": "you" },
+			{ "stat": "health", "delta": 10, "member": "you" },
+			{ "stat": "health", "delta": 10, "member": "wife" },
+			{ "stat": "health", "delta": 10, "member": "son" }
+		  ]
+		},
+		{
+		  "description": "Stay at home, with no significant changes.",
+		  "result": []
+		}
+	  ]
+	}
+  },
+  "20": {
+	"message": "The fair opens and the family is excited to go.",
+	"prompt": {
+	  "message": "Decide whether to attend the fair.",
+	  "outcomes": [
+		{
+		  "description": "Attend the fair, incurring $300 and increasing the well-being of the entire family by 20 points.",
+		  "result": [
+			{ "stat": "money", "delta": -300, "member": "you" },
+			{ "stat": "health", "delta": 20, "member": "you" },
+			{ "stat": "health", "delta": 20, "member": "wife" },
+			{ "stat": "health", "delta": 20, "member": "son" }
+		  ]
+		},
+		{
+		  "description": "Not attend the fair and maintain the current situation.",
+		  "result": []
+		}
+	  ]
+	}
+  },
+  "21": {
+	"message": "It's Sunday and it's time to pay important bills: rent, electricity, and water.",
+	"prompt": {
+	  "message": "Decide whether to make the corresponding payments or postpone them.",
+	  "outcomes": [
+		{
+		  "description": "Make all the payments: $600 for rent, $300 for electricity, and $100 for water.",
+		  "result": [
+			{ "stat": "money", "delta": -1000, "member": "you" }
+		  ]
+		},
+		{
+		  "description": "Do not make the payments, which will affect everyone's well-being starting on day 25.",
+		  "result": [
+			{ "stat": "health", "delta": -45, "member": "you" },
+			{ "stat": "health", "delta": -45, "member": "wife" },
+			{ "stat": "health", "delta": -45, "member": "son" }
+		  ]
+		}
+	  ]
+	}
+  }
+}
